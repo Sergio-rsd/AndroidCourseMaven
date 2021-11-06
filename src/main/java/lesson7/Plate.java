@@ -3,11 +3,10 @@ package lesson7;
 class Plate {
 
   private int food;
-  // не учтен обьем тарелки
+
   private final int volumePlate = 40;
 
-  Plate(int food) {
-    this.food = food;
+  Plate() {
   }
 
   boolean decreaseFood(int eatFood) {
@@ -15,13 +14,28 @@ class Plate {
       food -= eatFood;
       return true;
     } else {
-      System.out.println("В тарелке не хватило еды для кота");
+      System.out.println("В тарелке не хватит еды для следующего кота");
+      info();
       return false;
     }
   }
 
   public void setFood(int food) {
-    this.food = food;
+    // учтен обьем тарелки
+    if (food > volumePlate) {
+      System.out.printf("Сколько не сыпать в тарелку еды, но больше %d не влезет%n", volumePlate);
+      this.food = volumePlate;
+    } else {
+      this.food = food;
+    }
+  }
+
+  public int getVolumePlate() {
+    return volumePlate;
+  }
+
+  public int getFood() {
+    return food;
   }
 
   void info() {
