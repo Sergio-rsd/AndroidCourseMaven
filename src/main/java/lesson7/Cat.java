@@ -21,7 +21,7 @@ class Cat {
         currentAppetite = appetite;
 
       } else if (eatCat.getFood() > 0) { // не хватило наесться, но что-то есть в тарелке
-        currentAppetite = currentAppetite + eatCat.getFood();
+        currentAppetite  += eatCat.getFood();
 
         if (appetite - currentAppetite == 0) {
           System.out.printf("%s доел из тарелки %d еды и сытый%n", name, eatCat.getFood());
