@@ -8,7 +8,7 @@ public class Competition {
     Cat cat = new Cat("Кот Мурзик");
     TheWall wall = new TheWall();
     Road road = new Road();
-    ParticipantAction[] participants = {human, robot,cat};
+    ParticipantAction[] participants = {human, robot, cat};
     BarrierOverAction[] barrier = {road, wall};
 
     for (ParticipantAction participant : participants) {

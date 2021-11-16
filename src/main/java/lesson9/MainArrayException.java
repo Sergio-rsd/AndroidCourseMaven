@@ -7,10 +7,11 @@ import java.util.regex.Pattern;
 
 public class MainArrayException {
 
+  private static final Pattern pattern = Pattern.compile("\\D");
+
   public static void main(String[] args) {
     int goodLengthArray = 4;
     Random random = new Random();
-
     String[][] arrTrue = new String[4][4];
 
     for (int i = 0; i < goodLengthArray; i++) {
@@ -59,8 +60,7 @@ public class MainArrayException {
   }
 
   static boolean checkForCharacterOccurrence(String testText) {
-    Pattern pattern = Pattern.compile("\\D");
-    Matcher matcher = pattern.matcher(testText);
+    Matcher matcher = MainArrayException.pattern.matcher(testText);
     return matcher.find();
   }
 
