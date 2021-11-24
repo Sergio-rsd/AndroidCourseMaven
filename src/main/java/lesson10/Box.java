@@ -2,7 +2,7 @@ package lesson10;
 
 public class Box<E extends Fruit> {
 
-  private Object[] data;
+  private final Object[] data;
   private int currentSize = 0;
   private static final int DEFAULT_SIZE = 8;
 
@@ -46,7 +46,7 @@ public class Box<E extends Fruit> {
     return weightBox;
   }
 
-  public void pourOver(Box<?> el) {
+  public void pourOver(Box<? super E> el) {
 
     for (int i = this.currentSize - 1, j = el.currentSize; i >= 0; i--, j++) {
       el.data[ j ] = this.data[ i ];

@@ -18,6 +18,8 @@ public class FruitBoxCompare {
       orangeBox1.add(orange);
     }
     orangeBox2.add(orange);
+    orangeBox2.add(orange);
+
     System.out.println("Коробка №1 с апельсинами весит: " + orangeBox1.getWeight());
     System.out.println("Коробка №2 с апельсинами весит: " + orangeBox2.getWeight());
     System.out.println("Коробка №3 (пустая) с апельсинами весит: " + orangeBox3.getWeight());
@@ -29,6 +31,7 @@ public class FruitBoxCompare {
     System.out.printf("Сравним вес коробок с апельсинам(№1) и яблоками- %s%n", orangeBox1.compare(appleBox)? "равны": "не равны");
     System.out.println("Пересыпим апельсины из корбки №1 в коробку №2");
     orangeBox1.pourOver(orangeBox2);
+
     System.out.println("Коробка №1 с апельсинами весит: " + orangeBox1.getWeight());
     System.out.println("Коробка №2 с апельсинами весит: " + orangeBox2.getWeight());
     System.out.println("Пересыпим апельсины из корбки №2 в коробку №3 (пустую)");
