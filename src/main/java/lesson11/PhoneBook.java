@@ -1,5 +1,7 @@
 package lesson11;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,6 +38,19 @@ public class PhoneBook {
     peoples.create("Масяня");
     peoples.get("Масяня");
     System.out.println(peoples);
+
+    System.out.println("Вариант 3");
+    Map<String, ArrayList<String>> namePeoples = new HashMap<>();
+    namePeoples.computeIfAbsent("Иванов", k -> new ArrayList<>());
+    namePeoples.get("Иванов").add("123");
+    namePeoples.get("Иванов").add("001");
+
+    namePeoples.computeIfAbsent("Петров", k -> new ArrayList<>());
+    namePeoples.get("Петров").add("923");
+    namePeoples.get("Петров").add("6001");
+    namePeoples.get("Петров").add("199999");
+    System.out.println(namePeoples);
+    System.out.println("Петров: "+namePeoples.get("Петров"));
 
   }
 
