@@ -1,0 +1,5 @@
+2021-12-07 22:48:22,757 INFO l.CreateShift [main] Begin
+2021-12-07 22:48:22,765 WARN l.CreateShift [main] Информация
+2021-12-07 22:54:14,619 INFO l.CreateShift [main] Begin
+2021-12-07 22:54:14,624 ERROR l.CreateShift [main] Может быть ошибка
+2021-12-07 22:54:14,625 WARN l.CreateShift [main] Информация
